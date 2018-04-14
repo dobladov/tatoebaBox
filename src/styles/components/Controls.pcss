@@ -1,0 +1,30 @@
+.Controls {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  background-color: #eee;
+  box-shadow: -10px 3px 15px rgba(0, 0, 0, .2);
+  z-index: 1;
+
+  & button {
+    background-color: transparent;
+    border: none;
+  }
+
+  & .audioIcon {
+    width: 40px;
+  }
+
+  & .langs {
+    & img {
+      width: 50px;
+    }
+
+    & > img {
+      width: 30px;
+      margin: 0 5px;
+    }
+
+    display: inline-flex;
+  }
+}
