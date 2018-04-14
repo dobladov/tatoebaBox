@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: IcoMoon.io -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="48px"
+   height="48px"
+   viewBox="0 0 48 48"
+   enable-background="new 0 0 16 16"
+   xml:space="preserve"
+   fill="#000000"
+   sodipodi:docname="commit.svg"
+   inkscape:version="0.92.2 2405546, 2018-03-11"><metadata
+   id="metadata9"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs7" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1852"
+   inkscape:window-height="1051"
+   id="namedview5"
+   showgrid="false"
+   inkscape:zoom="4.9166667"
+   inkscape:cx="22.372881"
+   inkscape:cy="24"
+   inkscape:window-x="68"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" /> <path
+   d="M 45.00,27.00l-12.552,0.00 C 31.209,30.489, 27.915,33.00, 24.00,33.00c-3.912,0.00-7.209-2.511-8.448-6.00L3.00,27.00 C 1.344,27.00,0.00,25.659,0.00,24.00s 1.344-3.00, 3.00-3.00l12.552,0.00 C 16.791,17.514, 20.088,15.00, 24.00,15.00c 3.915,0.00, 7.209,2.514, 8.448,6.00L45.00,21.00 c 1.659,0.00, 3.00,1.341, 3.00,3.00S 46.659,27.00, 45.00,27.00 z M 24.00,21.00C 22.344,21.00, 21.00,22.341, 21.00,24.00s 1.344,3.00, 3.00,3.00c 1.659,0.00, 3.00-1.341, 3.00-3.00S 25.659,21.00, 24.00,21.00z"
+   id="path2"
+   style="stroke:none;stroke-opacity:1;fill:#666666;fill-opacity:1" /></svg>
