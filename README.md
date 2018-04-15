@@ -7,5 +7,5 @@ Language tool for practicing sentences from https://tatoeba.org
 
 - [ ] Add audio from real natives
 - [x] Organize CSS
-- [ ] Set production build
+- [x] Set production build
 - [x] Add keyboard events
