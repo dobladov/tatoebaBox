@@ -6,6 +6,6 @@ Language tool for practicing sentences from https://tatoeba.org
 ## ToDo
 
 - [ ] Add audio from real natives
-- [ ] Organize CSS
+- [x] Organize CSS
 - [ ] Set production build
 - [x] Add keyboard events

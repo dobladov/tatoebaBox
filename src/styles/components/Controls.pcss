@@ -1,9 +1,11 @@
+@import url('../variables.pcss');
+
 .Controls {
   display: flex;
   justify-content: space-evenly;
   padding: 10px;
-  background-color: #eee;
-  box-shadow: -10px 3px 15px rgba(0, 0, 0, .2);
+  background-color: var(--base);
+  box-shadow: -10px 3px 15px var(--shadow);
   z-index: 1;
 
   & button {
@@ -16,6 +18,8 @@
   }
 
   & .langs {
+    display: inline-flex;
+
     & img {
       width: 50px;
     }
@@ -24,7 +28,5 @@
       width: 30px;
       margin: 0 5px;
     }
-
-    display: inline-flex;
   }
 }
