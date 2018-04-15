@@ -1,5 +1,5 @@
 # Tatoeba Box
-Language tool for practicing sentences from https://tatoeba.org 
+Language tool for practicing sentences from https://tatoeba.org
 
 ![Capture](https://i.imgur.com/D6UWFR3.png)
 
@@ -8,4 +8,4 @@ Language tool for practicing sentences from https://tatoeba.org
 - [ ] Add audio from real natives
 - [ ] Organize CSS
 - [ ] Set production build
-- [ ] Add keyboard events
+- [x] Add keyboard events
