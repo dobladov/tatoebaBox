@@ -7,6 +7,7 @@ Alpha running on [tatoeba.surge.sh](https://tatoeba.surge.sh/)
 
 ## ToDo
 
+- [ ] Add search box
 - [ ] Add audio from real natives
 - [x] Organize CSS
 - [x] Set production build
