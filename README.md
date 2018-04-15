@@ -8,3 +8,4 @@ Language tool for practicing sentences from https://tatoeba.org
 - [ ] Add audio from real natives
 - [ ] Organize CSS
 - [ ] Set production build
+- [ ] Add keyboard events
