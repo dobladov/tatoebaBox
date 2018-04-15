@@ -11,9 +11,6 @@ class QuestionBox extends React.Component {
   }
 
   componentDidMount() {
-  //   if (this.props.audio)
-  //     play(this.props.lang === 'eng' ? this.props.sentence.germanText : this.props.sentence.englishText)
-
     document.addEventListener('keydown', e => {
       if (e.keyCode === 13 && e.ctrlKey && e.shiftKey) {
         play(this.props.lang === 'eng' ? this.props.sentence.germanText : this.props.sentence.englishText,
@@ -22,16 +19,14 @@ class QuestionBox extends React.Component {
     })
   }
 
-  // componentWillReceiveProps() {
-  //   if (this.props.audio)
-  //     play(this.props.lang === 'eng' ? this.props.sentence.germanText : this.props.sentence.englishText)
-  // }
-
   render() {
     const { sentence, lang, audio } = this.props
     const question = lang === 'eng' ? sentence.englishText : sentence.germanText
     const answer = lang === 'eng' ? sentence.germanText : sentence.englishText
     const langAnswer = lang === 'eng' ? 'Deutsch Female': 'UK English Female'
+
+    if (audio)
+      play(answer, langAnswer)
 
     return (
       <section className="QuestionBox">
