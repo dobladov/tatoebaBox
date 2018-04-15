@@ -34,6 +34,11 @@ class InputBox extends React.Component {
         style={{width: `${this.props.word.length*1.4}ex`}}
         onKeyUp={this.checkAnswer}
         onClick={() => play(this.props.word, langAnswer)}
+        onKeyDown={e => {
+          if (e.keyCode === 32 && e.ctrlKey) {
+            play(this.props.word, langAnswer)
+          }
+        }}
       />
     )
   }

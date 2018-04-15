@@ -1,4 +1,5 @@
 import React from 'react'
+import { triggerClick } from '../common'
 
 import '../../styles/components/List.pcss'
 
@@ -13,6 +14,10 @@ const List = ({sentences, lang, currentIndex, setCurrentIndex }) => (
         className={`sentence${currentIndex === i ? ' current': ''}`.trim()}
         onClick={() => {
           setCurrentIndex(i)
+        }}
+        onKeyDown={e => {
+          if (!e.ctrlKey)
+            triggerClick(e, 13)
         }}
       >
         {lang === 'eng' ? sentence.englishText : sentence.germanText}

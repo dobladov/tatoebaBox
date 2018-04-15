@@ -10,10 +10,17 @@ class QuestionBox extends React.Component {
     super(props)
   }
 
-  // componentDidMount() {
+  componentDidMount() {
   //   if (this.props.audio)
   //     play(this.props.lang === 'eng' ? this.props.sentence.germanText : this.props.sentence.englishText)
-  // }
+
+    document.addEventListener('keydown', e => {
+      if (e.keyCode === 13 && e.ctrlKey && e.shiftKey) {
+        play(this.props.lang === 'eng' ? this.props.sentence.germanText : this.props.sentence.englishText,
+          this.props.lang === 'eng' ? 'Deutsch Female': 'UK English Female')
+      }
+    })
+  }
 
   // componentWillReceiveProps() {
   //   if (this.props.audio)

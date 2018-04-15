@@ -24,11 +24,22 @@ class App extends React.Component {
     this.toggleLang = this.toggleLang.bind(this)
     this.toggleAudio = this.toggleAudio.bind(this)
     this.setCurrentIndex = this.setCurrentIndex.bind(this)
+    this.setListeners = this.setListeners.bind(this)
   }
 
   componentDidMount() {
     this.loadIndex().then(() => {
       this.loadData()
+      this.setListeners()
+    })
+  }
+
+  setListeners() {
+    document.addEventListener('keydown', e => {
+      if (e.keyCode === 13 && e.ctrlKey && !e.shiftKey) {
+        const next = this.state.currentIndex + 1 < this.state.sentences.length ? this.state.currentIndex + 1 : 0
+        this.setCurrentIndex(next)
+      }
     })
   }
 

@@ -5,6 +5,7 @@ import gbFlag from '../../assets/img/gb.svg'
 import muteIcon from '../../assets/img/mute.svg'
 import audioIcon from '../../assets/img/audio.svg'
 import commitIcon from '../../assets/img/commit.svg'
+import { triggerClick } from '../common'
 
 import '../../styles/components/Controls.pcss'
 
@@ -23,12 +24,17 @@ const Controls = ({toggleLang, loadData, lang, audio, toggleAudio}) => (
     >
       <img src={audio ? audioIcon : muteIcon} alt="audio"/>
     </button>
-    <div className="langs" onClick={toggleLang}>
-      <button>
+    <div
+      className="langs"
+      onClick={toggleLang}
+      tabIndex="0"
+      onKeyDown={triggerClick}
+    >
+      <button tabIndex="-1">
         <img src={lang === 'ger' ? gbFlag: deFlag} alt={lang}/>
       </button>
       <img src={commitIcon} alt=""/>
-      <button >
+      <button tabIndex="-1">
         <img src={lang === 'eng' ? gbFlag: deFlag} alt={lang}/>
       </button>
 
