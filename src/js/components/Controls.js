@@ -31,11 +31,11 @@ const Controls = ({toggleLang, loadData, lang, audio, toggleAudio}) => (
       onKeyDown={triggerClick}
     >
       <button tabIndex="-1">
-        <img src={lang === 'ger' ? gbFlag: deFlag} alt={lang}/>
+        <img src={lang === 'ger' ? deFlag : gbFlag} alt={lang}/>
       </button>
       <img src={commitIcon} alt=""/>
       <button tabIndex="-1">
-        <img src={lang === 'eng' ? gbFlag: deFlag} alt={lang}/>
+        <img src={lang === 'eng' ? deFlag : gbFlag} alt={lang}/>
       </button>
 
     </div>
