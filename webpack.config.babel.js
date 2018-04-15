@@ -3,6 +3,7 @@ import webpack from 'webpack'
 import merge from 'webpack-merge'
 import StyleLintPlugin from 'stylelint-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 // import CopyWebpackPlugin from 'copy-webpack-plugin'
 
 const ENV = process.env.NODE_ENV
@@ -46,7 +47,12 @@ let Config = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'templates/index.html'
+    })
+  ],
 }
 
 if (ENV === 'production') {
@@ -91,7 +97,7 @@ if (ENV === 'development') {
     //   'react-hot-loader/patch'
     // ],
     devServer: {
-      contentBase: __dirname + "/src/templates/",
+      // contentBase: __dirname + "/src/templates/",
       inline: true,
       hot: true,
       overlay: true
