@@ -3,10 +3,11 @@ import React from 'react'
 import '../../styles/components/List.pcss'
 
 const List = ({sentences, lang, currentIndex, setCurrentIndex }) => (
-  <aside className="List">
+  <ul className="List">
     {sentences.length > 0 &&
     sentences.map((sentence, i) => (
-      <div
+      <li
+        tabIndex="0"
         key={`${sentence.englishId}-${sentence.germanId}`}
         style={{animationDelay: `${150 * i}ms`}}
         className={`sentence${currentIndex === i ? ' current': ''}`.trim()}
@@ -15,9 +16,9 @@ const List = ({sentences, lang, currentIndex, setCurrentIndex }) => (
         }}
       >
         {lang === 'eng' ? sentence.englishText : sentence.germanText}
-      </div>
+      </li>
     ))}
-  </aside>
+  </ul>
 )
 
 export default List
