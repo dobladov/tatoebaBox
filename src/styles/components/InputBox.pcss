@@ -1,21 +1,60 @@
 @import url('../variables.pcss');
 
-.InputBox {
-  background-color:transparent;
-  border: none;
-  border-bottom: 2px solid black;
-  margin-left: 5px;
-  text-align: center;
+.inputWrapper {
+  display: inline-block;
+  position: relative;
 
-  &.error {
-    border-color: var(--error);
+  & .InputBox {
+    background-color:transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    margin-left: 5px;
+    text-align: center;
+    position: relative;
+
+    &.error {
+      border-color: var(--error);
+    }
+
+    &:focus {
+      border-color: var(--primary);
+    }
+
+    &.correct {
+      border-color: var(--correct);
+    }
   }
 
-  &:focus {
-    border-color: var(--primary);
+  &:hover {
+    & > span {
+      display: block;
+    }
   }
 
-  &.correct {
-    border-color: var(--correct);
+  & > span {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    display: none;
+    text-align: center;
+    animation: newItem .5s forwards;
+    animation-delay: 500ms;
+    opacity: 0;
+    background-color: transparent;
+    z-index: 1;
+  }
+}
+
+@keyframes newItem {
+  from {
+    background-color: transparent;
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    background-color: var(--base-light);
+    transform: translateY(0);
+    opacity: 1;
   }
 }

@@ -27,20 +27,24 @@ class InputBox extends React.Component {
     const { sentence, lang, langAnswer } = this.props
 
     return (
-      <input
-        type="text"
-        className="InputBox"
-        title={this.props.word}
-        style={{width: `${this.props.word.length*1.4}ex`}}
-        maxlength={this.props.word.length}
-        onKeyUp={this.checkAnswer}
-        onClick={() => play(this.props.word, langAnswer)}
-        onKeyDown={e => {
-          if (e.keyCode === 32 && e.ctrlKey) {
-            play(this.props.word, langAnswer)
-          }
-        }}
-      />
+      <div className="inputWrapper">
+        <input
+          type="text"
+          className="InputBox"
+          style={{width: `${this.props.word.length*1.4}ex`}}
+          maxlength={this.props.word.length}
+          onKeyUp={this.checkAnswer}
+          onClick={() => play(this.props.word, langAnswer)}
+          onKeyDown={e => {
+            if (e.keyCode === 32 && e.ctrlKey) {
+              play(this.props.word, langAnswer)
+            }
+          }}
+        />
+        <span>
+          {this.props.word}
+        </span>
+      </div>
     )
   }
 }
