@@ -91,7 +91,7 @@ class App extends React.Component {
             <QuestionBox lang={lang} audio={audio} sentence={sentences[currentIndex]}/>
           }
           <footer className="footer">
-            <a href="https://tatoeba.org/">
+            <a href="https://tatoeba.org/" target="_blank">
               Sentenes provided by Tatoeba &nbsp;<img src={tatoebaLogo} alt="Tatoeba Logo"/>
             </a>
           </footer>
