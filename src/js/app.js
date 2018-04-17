@@ -92,7 +92,7 @@ class App extends React.Component {
           }
           <footer className="footer">
             <a href="https://tatoeba.org/" target="_blank">
-              Sentenes provided by Tatoeba &nbsp;<img src={tatoebaLogo} alt="Tatoeba Logo"/>
+              Sentences provided by Tatoeba &nbsp;<img src={tatoebaLogo} alt="Tatoeba Logo"/>
             </a>
           </footer>
         </section>
