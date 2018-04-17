@@ -36,7 +36,12 @@ class QuestionBox extends React.Component {
             title={answer}
           >
             <span>
-              {question}
+              <a
+                href={`https://tatoeba.org/eng/sentences/show/${lang === 'eng' ? sentence.englishId : sentence.germanId}`}
+                target="_blank"
+              >
+                {question}
+              </a>
             </span>
             {audio &&
               <button
