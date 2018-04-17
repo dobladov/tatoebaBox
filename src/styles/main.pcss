@@ -15,6 +15,37 @@
     max-width: 500px;
   }
 
+  & .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    & .footer {
+      padding: 20px;
+      background-color: var(--base);
+      text-align: right;
+
+      & a {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      & img {
+        height: 35px;
+      }
+    }
+  }
+
+  & a {
+    color: var(--text);
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: var(--primary);
+    }
+  }
+
   & pre {
     font-size: 1rem;
     white-space: pre-wrap;

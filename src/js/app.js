@@ -4,6 +4,7 @@ import List from './components/List'
 import QuestionBox from './components/QuestionBox'
 import Controls from './components/Controls'
 // import { baseUrl } from '../../config'
+import tatoebaLogo from '../assets/img/tatoeba.svg'
 
 import 'normalize.css'
 import '../styles/main.pcss'
@@ -85,9 +86,16 @@ class App extends React.Component {
           <Controls audio={audio} toggleAudio={this.toggleAudio} lang={lang} toggleLang={this.toggleLang} loadData={this.loadData}/>
           <List lang={lang} sentences={sentences} currentIndex={currentIndex} setCurrentIndex={this.setCurrentIndex} />
         </aside>
-        {sentences.length >0 &&
-          <QuestionBox lang={lang} audio={audio} sentence={sentences[currentIndex]}/>
-        }
+        <section className="main">
+          {sentences.length >0 &&
+            <QuestionBox lang={lang} audio={audio} sentence={sentences[currentIndex]}/>
+          }
+          <footer className="footer">
+            <a href="https://tatoeba.org/">
+              Sentenes provided by Tatoeba &nbsp;<img src={tatoebaLogo} alt="Tatoeba Logo"/>
+            </a>
+          </footer>
+        </section>
       </main>
     )
   }
