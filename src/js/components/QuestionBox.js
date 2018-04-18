@@ -53,8 +53,8 @@ class QuestionBox extends React.Component {
             }
           </div>
           <div className="answer">
-            {answer.split(' ').map(word => (
-              <InputBox langAnswer={langAnswer} key={`${word}-${sentence.englishId}-${sentence.germanId}`} word={word} />
+            {answer.split(' ').map((word, i) => (
+              <InputBox langAnswer={langAnswer} key={`${i}-${word}-${sentence.englishId}-${sentence.germanId}`} word={word} />
             ))}
 
             {audio &&
