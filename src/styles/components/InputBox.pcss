@@ -41,19 +41,19 @@
     animation: newTip .5s forwards;
     animation-delay: 500ms;
     opacity: 0;
-    background-color: transparent;
+    background-color: var(--primary);
+    color: var(--base);
+    border-radius: 4px;
     z-index: 1;
   }
 }
 
 @keyframes newTip {
   from {
-    background-color: transparent;
     opacity: 0;
     transform: translateY(-30px);
   }
   to {
-    background-color: var(--base-light);
     transform: translateY(0);
     opacity: 1;
   }
