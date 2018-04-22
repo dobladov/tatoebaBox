@@ -23,6 +23,7 @@ class App extends React.Component {
     }
     this.loadData = this.loadData.bind(this)
     this.toggleLang = this.toggleLang.bind(this)
+    this.loadHistory = this.loadHistory.bind(this)
     this.toggleAudio = this.toggleAudio.bind(this)
     this.setCurrentIndex = this.setCurrentIndex.bind(this)
     this.setListeners = this.setListeners.bind(this)
@@ -65,6 +66,10 @@ class App extends React.Component {
     })
   }
 
+  loadHistory() {
+    this.setState({sentences: JSON.parse(localStorage.getItem('sentences')), currentIndex: 0})
+  }
+
   toggleLang() {
     this.setState({lang: this.state.lang === 'eng' ? 'ger' : 'eng'})
   }
@@ -83,7 +88,7 @@ class App extends React.Component {
     return (
       <main className="wrapper">
         <aside>
-          <Controls audio={audio} toggleAudio={this.toggleAudio} lang={lang} toggleLang={this.toggleLang} loadData={this.loadData}/>
+          <Controls audio={audio} toggleAudio={this.toggleAudio} loadHistory={this.loadHistory} lang={lang} toggleLang={this.toggleLang} loadData={this.loadData}/>
           <List lang={lang} sentences={sentences} currentIndex={currentIndex} setCurrentIndex={this.setCurrentIndex} />
         </aside>
         <section className="main">

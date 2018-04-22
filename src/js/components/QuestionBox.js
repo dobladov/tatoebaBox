@@ -19,6 +19,17 @@ class QuestionBox extends React.Component {
     })
   }
 
+  componentWillReceiveProps(nextProps) {
+    let sentences = JSON.parse(localStorage.getItem('sentences')) || []
+
+    !sentences.find(s => (s.englishId === this.props.sentence.englishId) && (s.germanId === this.props.sentence.germanId))
+    ? sentences.push(this.props.sentence)
+    : null
+
+    sentences = sentences.length >= 200 ? sentences.slice(-200) : sentences
+    localStorage.setItem('sentences', JSON.stringify(sentences))
+  }
+
   render() {
     const { sentence, lang, audio } = this.props
     const question = lang === 'eng' ? sentence.englishText : sentence.germanText
