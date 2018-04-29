@@ -32,7 +32,7 @@ class InputBox extends React.Component {
           type="text"
           className="InputBox"
           style={{width: `${this.props.word.length*1.4}ex`}}
-          maxlength={this.props.word.length}
+          maxLength={this.props.word.length}
           onKeyUp={this.checkAnswer}
           onClick={() => play(this.props.word, langAnswer)}
           onKeyDown={e => {

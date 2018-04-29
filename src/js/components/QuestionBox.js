@@ -31,13 +31,15 @@ class QuestionBox extends React.Component {
   }
 
   render() {
-    const { sentence, lang, audio } = this.props
+    const { sentence, lang, audio, showInstructions } = this.props
     const question = lang === 'eng' ? sentence.englishText : sentence.germanText
     const answer = lang === 'eng' ? sentence.germanText : sentence.englishText
     const langAnswer = lang === 'eng' ? 'Deutsch Female': 'UK English Female'
 
-    if (audio)
-      play(answer, langAnswer)
+    if (!showInstructions) {
+      if (audio)
+        play(answer, langAnswer)
+    }
 
     return (
       <section className="QuestionBox">
