@@ -3,8 +3,12 @@ import { render } from 'react-dom'
 import List from './components/List'
 import QuestionBox from './components/QuestionBox'
 import Controls from './components/Controls'
+import Instructions from './components/Instructions'
 // import { baseUrl } from '../../config'
 import tatoebaLogo from '../assets/img/tatoeba.svg'
+import infoLogo from '../assets/img/info.svg'
+import reportLogo from '../assets/img/report.svg'
+import cornerLogo from '../assets/img/githubCorner.svg'
 
 import 'normalize.css'
 import '../styles/main.pcss'
@@ -19,7 +23,8 @@ class App extends React.Component {
       sentences: [],
       currentIndex: 0,
       lang: 'eng',
-      audio: true
+      audio: true,
+      showInstuctions: false
     }
     this.loadData = this.loadData.bind(this)
     this.toggleLang = this.toggleLang.bind(this)
@@ -27,6 +32,7 @@ class App extends React.Component {
     this.toggleAudio = this.toggleAudio.bind(this)
     this.setCurrentIndex = this.setCurrentIndex.bind(this)
     this.setListeners = this.setListeners.bind(this)
+    this.hideInstructions = this.hideInstructions.bind(this)
   }
 
   componentDidMount() {
@@ -82,6 +88,10 @@ class App extends React.Component {
     this.setState({currentIndex: index})
   }
 
+  hideInstructions() {
+    this.setState({showInstuctions: false})
+  }
+
   render() {
     const { sentences, currentIndex, lang, audio } = this.state
 
@@ -92,15 +102,36 @@ class App extends React.Component {
           <List lang={lang} sentences={sentences} currentIndex={currentIndex} setCurrentIndex={this.setCurrentIndex} />
         </aside>
         <section className="main">
+
+          <div className="top">
+            <button
+              title="Instructions"
+              onClick={e => this.setState({showInstuctions: true})}
+            >
+              <img src={infoLogo} alt="Instructions"/>
+            </button>
+            <a href="https://github.com/dobladov/tatoebaBox/issues" title="Report a problem" target="_blank">
+              <img src={reportLogo} alt="Report logo"/>
+            </a>
+            <a className="corner" href="https://github.com/dobladov/tatoebaBox" title="Github Repositiory" target="_blank">
+              <img src={cornerLogo} alt="Github Repositiory"/>
+            </a>
+          </div>
+
+          <div className="middle">
           {sentences.length >0 &&
-            <QuestionBox lang={lang} audio={audio} sentence={sentences[currentIndex]}/>
+            <QuestionBox lang={lang} audio={audio} sentence={sentences[currentIndex]} showInstructions={this.state.showInstuctions}/>
           }
+          </div>
           <footer className="footer">
             <a href="https://tatoeba.org/" target="_blank">
               Sentences provided by Tatoeba &nbsp;<img src={tatoebaLogo} alt="Tatoeba Logo"/>
             </a>
           </footer>
         </section>
+        {this.state.showInstuctions &&
+          <Instructions hideInstructions={this.hideInstructions} />
+        }
       </main>
     )
   }

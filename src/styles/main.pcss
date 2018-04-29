@@ -19,10 +19,45 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    background-color: var(--base);
+
+    & .top {
+      padding: 10px;
+      text-align: right;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      position: relative;
+      padding-right: 45px;
+
+      & .corner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        padding: 0;
+      }
+
+      & button {
+        width: 50px;
+        background-color: transparent;
+        border: none;
+      }
+
+      & a {
+        width: 40px;
+        padding: 0 8px;
+      }
+    }
+
+    & .middle {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
 
     & .footer {
       padding: 20px;
-      background-color: var(--base);
       text-align: right;
 
       & a {
