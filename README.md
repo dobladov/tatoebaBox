@@ -7,7 +7,7 @@ Alpha running on [tatoeba.surge.sh](https://tatoeba.surge.sh/)
 
 ## ToDo
 
-- [ ] Add search box (Canceled - Algolia does not support more thna 10000 records for free)
+- [ ] Add search box (Canceled - Algolia does not support more than 10000 records for free)
 - [ ] Add audio from real natives
     - [ ] Upload data with licenses and authors
 - [x] Organize CSS
